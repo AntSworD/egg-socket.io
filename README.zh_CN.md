@@ -62,6 +62,19 @@ exports.io = {
 };
 ```
 
+```js
+exports.io = {
+  init: { }, // passed to engine.io
+  namespace: {
+    '/': {
+      connectionMiddleware: [],
+      packetMiddleware: [],
+    },
+  },
+  amqp: 'amqp://localhost'
+};
+```
+
 #### uws
 
 如果你想用 [uws](https://github.com/uWebSockets/uWebSockets) 替换掉默认的 `us` , 可以这样配置:
